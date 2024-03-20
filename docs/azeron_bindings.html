@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Keybindings for Azeron</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            @media print {
+                .no-print{
+                    display: none;
+                }
+            }
+            @media screen {
+                .assigned{
+                    background-color: aqua;
+                }
+                .unassigned{
+                    background-color: pink;
+                }                
+            }
+            .assigned{
+                border: 1px solid black;
+                border-radius: 10px;
+                text-align: center;
+                }
+            .unassigned{
+                border: 2px solid black;
+                border-radius: 10px;
+                text-align: center;
+            }              
+            .container{
+                display: grid;
+                grid-template-columns: repeat(8, 100px);
+                grid-template-rows: repeat(6, 150px);
+            }
+            .blank {
+                background-color: white;
+            }            
+            .top-left-blank{
+                grid-column: 1 / span 6;
+                grid-row: 1;
+            }
+            #b28{
+                grid-column: 7;
+                grid-row: 1;
+            }
+            .top-right-blank{
+                grid-column: 8;
+                grid-row: 1;
+            }
+            .left-mid-blank{
+                grid-column: 1;
+                grid-row: 2 / span 2;
+            }
+            #b4{
+                grid-column: 2;
+                grid-row: 2;
+            }
+            #b8{
+                grid-column: 3;
+                grid-row: 2;
+            }
+            #b12{
+                grid-column: 4;
+                grid-row: 2;
+            }
+            #b17{
+                grid-column: 5;
+                grid-row: 2;
+            }
+            #b29{
+                grid-column: 6;
+                grid-row: 2;
+            }
+            #b22{
+                grid-column: 7;
+                grid-row: 2;
+            }
+            #b31{
+                grid-column: 8;
+                grid-row: 2;
+            }
+            #b3{
+                grid-column: 2;
+                grid-row: 3;
+            }
+            #b7{
+                grid-column: 3;
+                grid-row: 3;
+            }
+            #b11{
+                grid-column: 4;
+                grid-row: 3;
+            }
+            #b16{
+                grid-column: 5;
+                grid-row: 3;
+            }
+            .row-3-blank-1{
+                grid-column: 6;
+                grid-row: 3;
+            }
+            #b30{
+                grid-column: 7;
+                grid-row: 3;
+            }
+            .row-3-blank-2{
+                grid-column: 8;
+                grid-row: 3;
+            }
+            #b36{
+                grid-column: 1;
+                grid-row: 4;
+            }
+            #b2{
+                grid-column: 2;
+                grid-row: 4;          
+            }
+            #b6{
+                grid-column: 3;
+                grid-row: 4;
+            }
+            #b10{
+                grid-column: 4;
+                grid-row: 4;
+            }
+            #b15{
+                grid-column: 5;
+                grid-row: 4;
+            }
+            #b19{
+                grid-column: 6;
+                grid-row: 4;
+            }
+            #b24{
+                grid-column: 7 / span 2;
+                grid-row: 4 / span 2;
+            }
+            .bottom-left-blank{
+                grid-column: 1;
+                grid-row: 5 / span 2;
+            }
+            #b1{
+                grid-column: 2;
+                grid-row: 5;
+            }
+            #b5{
+                grid-column: 3;
+                grid-row: 5;
+            }
+            #b9{
+                grid-column: 4;
+                grid-row: 5;
+            }
+            #b14{
+                grid-column: 5;
+                grid-row: 5;
+            }
+            .bottom-right-blank{
+                grid-column: 6;
+                grid-row: 5 / span 2;
+            }
+            #b37{
+                grid-column: 2;
+                grid-row: 6;
+            }
+            #b38{
+                grid-column: 3;
+                grid-row: 6;
+            }
+            #b13{
+                grid-column: 4;
+                grid-row: 6;
+            }
+            #b18{
+                grid-column: 5;
+                grid-row: 6;
+            }
+            #b23{
+                grid-column: 7;
+                grid-row: 6;
+            }
+            #b20{
+                grid-column: 8;
+                grid-row: 6;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="blank top-left-blank"></div>
+            <div class="blank top-right-blank"></div>
+            <div class="blank left-mid-blank"></div>
+            <div class="blank row-3-blank-1"></div>
+            <div class="blank row-3-blank-2"></div>
+            <div class="blank bottom-left-blank"></div>
+            <div class="blank bottom-right-blank"></div>
+            <div class="unassigned" id="b1"></div>
+            <div class="unassigned" id="b2"></div>
+            <div class="unassigned" id="b3"></div>
+            <div class="unassigned" id="b4"></div>
+            <div class="unassigned" id="b5"></div>
+            <div class="unassigned" id="b6"></div>
+            <div class="unassigned" id="b7"></div>
+            <div class="unassigned" id="b8"></div>
+            <div class="unassigned" id="b9"></div>
+            <div class="unassigned" id="b10"></div>
+            <div class="unassigned" id="b11"></div>
+            <div class="unassigned" id="b12"></div>
+            <div class="unassigned" id="b13"></div>
+            <div class="unassigned" id="b14"></div>
+            <div class="unassigned" id="b15"></div>
+            <div class="unassigned" id="b16"></div>
+            <div class="unassigned" id="b17"></div>
+            <div class="unassigned" id="b18"></div>
+            <div class="unassigned" id="b19"></div>
+            <div class="unassigned" id="b20"></div>
+            <div class="unassigned" id="b22"></div>
+            <div class="unassigned" id="b23"></div>
+            <div class="unassigned" id="b24"></div>
+            <div class="unassigned" id="b28"></div>
+            <div class="unassigned" id="b29"></div>
+            <div class="unassigned" id="b30"></div>
+            <div class="unassigned" id="b31"></div>
+            <div class="unassigned" id="b36"></div>
+            <div class="unassigned" id="b37"></div>
+            <div class="unassigned" id="b38"></div>
+        </div>      
+        <div class="no-print">
+            <div id="div-profile-selection">
+                <select id="select-profiles">
+                </select>
+            </div>
+            <p>
+                Either paste the json from your exported profiles in the text area below, Drag and drop your JSON file over the image below, or use the button to browse for the profile file
+            </p>
+            <div>
+                <textarea id="taJson"></textarea>
+                <button id="bPopulate">Populate values</button>
+            </div>
+            <div>
+                <div>
+                    <img id="drop-area" src="upload_img.png"/>
+                </div>
+                <div>
+                    <input type="file" id="file-selector" accept=".json">
+                </div>
+            </div>
+        </div>
+        <script defer>
+            let popButton = document.getElementById("bPopulate");
+
+            popButton.addEventListener("click", e => {
+                let ta = document.getElementById("taJson");
+                let jText = ta.value;
+                let jsonO = JSON.parse(jText);
+        
+                handleJsonO(jsonO);
+            });
+
+            let pList = document.getElementById("select-profiles");
+
+
+            let profileButtonKey = "inputs"
+            let buttonLblKey = "label"
+            function handleJsonO(jsonO){
+                //pList.textContent = '';
+                console.log("Handling JSON", jsonO);
+                
+                let cloned = pList.cloneNode(false);
+                pList.parentNode.replaceChild(cloned, pList);
+                pList = cloned;
+
+                let profiles;
+                if(Array.isArray(jsonO)){
+                    console.log("JsonO is an array", jsonO)
+                    profiles = jsonO;
+                    profileButtonKey = "buttons";
+                    buttonLblKey = "userLabel";
+                }
+                else{
+                    console.log("JsonO is not an array", jsonO);
+                    profiles = jsonO.profiles;
+                    profileButtonKey = "inputs";
+                    buttonLblKey = "label";
+                }
+
+                for( i = 0; i < profiles.length;i++){
+                    let nLi = document.createElement("option");
+                    nLi.value = i;
+                    nLi.textContent = profiles[i].name;
+                    pList.appendChild(nLi);
+                }
+
+                showProfile(profiles, 0);
+                pList.addEventListener("change", e => {
+                
+                showProfile(profiles, e.target.value);
+
+        });
+            }
+
+            function markAllUnassigned(){
+                let assigned = document.querySelectorAll(".assigned");
+                assigned.forEach(ele => {
+                    ele.textContent = '';
+                    ele.classList.remove("assigned");
+                    ele.classList.add("unassigned");
+                })
+            }
+
+            function showProfile(profiles, index){
+                console.log(`Showing profile ${index}`, {profiles, index});
+                markAllUnassigned();
+                let profileInputs = profiles[index][profileButtonKey]; 
+                profileInputs.forEach(
+                    b => 
+                    { 
+                        console.log(b.id);
+                        let mItem = document.getElementById(`b${b.id}`); 
+                        if (mItem != null && b[buttonLblKey].length > 0){
+                            mItem.classList.remove("unassigned");
+                            mItem.classList.add("assigned");                            
+                            mItem.textContent = b[buttonLblKey];
+                        }
+                    }
+                );                               
+            }
+
+            function useOlderProfileStructure(profile){
+
+            }
+
+            function useNewerProfileStructure(profile){
+
+            }
+
+
+            function handleFile(file){
+
+                const reader = new FileReader();
+
+                reader.addEventListener('load', e => {
+                    const result = e.target.result;
+                    let jsonO = JSON.parse(result);
+                    console.log("File Read, passing JSON Object to handler");
+                    handleJsonO(jsonO);
+                });
+
+                reader.addEventListener('progress', e => {
+                    if(e.loaded && e.total){
+                        const percent = (e.loaded / e.total) * 100;
+                        console.log(`Reading File - Progress: ${Math.round(percent)}`);
+                    }
+                });
+
+                reader.readAsText(file);
+            }
+
+
+            const fileSelector = document.getElementById('file-selector');
+            fileSelector.addEventListener("change", e => {
+                const chosenFile = e.target.files[0];
+                console.log("File Uploaded Manually");
+                handleFile(chosenFile);
+            });
+
+
+            const dropArea = document.getElementById('drop-area');
+            dropArea.addEventListener('dragover', e => {
+                e.stopPropagation();
+                e.preventDefault();
+                e.dataTransfer.dropEffect = 'copy';
+            });
+            dropArea.addEventListener('drop', e => {
+                e.stopPropagation();
+                e.preventDefault();
+                const chosenFile = e.dataTransfer.files[0];
+                console.log("File Uploaded Via Drop");
+                handleFile(chosenFile);
+            });
+
+
+        </script>
+    </body>
+</html>
