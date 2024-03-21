@@ -56,6 +56,9 @@
                 grid-column: 1;
                 grid-row: 2 / span 2;
             }
+            #div-profile-name{
+                font-size: 40px;
+            }
             #b4{
                 grid-column: 2;
                 grid-row: 2;
@@ -192,6 +195,7 @@
         </style>
     </head>
     <body>
+        <div id="div-profile-name"></div>
         <div class="container">
             <div class="blank top-left-blank"></div>
             <div class="blank top-right-blank"></div>
@@ -245,7 +249,7 @@
             </div>
             <div>
                 <div>
-                    <img id="drop-area" src="./upload_img.png"/>
+                    <img id="drop-area" src="upload_img.png"/>
                 </div>
                 <div>
                     <input type="file" id="file-selector" accept=".json">
@@ -300,9 +304,9 @@
                 showProfile(profiles, 0);
                 pList.addEventListener("change", e => {
                 
-                showProfile(profiles, e.target.value);
+                    showProfile(profiles, e.target.value);
 
-        });
+                });
             }
 
             function markAllUnassigned(){
@@ -314,9 +318,12 @@
                 })
             }
 
+            const profileDiv = document.getElementById("div-profile-name");
+
             function showProfile(profiles, index){
                 console.log(`Showing profile ${index}`, {profiles, index});
                 markAllUnassigned();
+                profileDiv.textContent = profiles[index].name;
                 let profileInputs = profiles[index][profileButtonKey]; 
                 profileInputs.forEach(
                     b => 
